@@ -8,9 +8,8 @@ def insertionSort(alist):
             if alist[i-1] > alist[index]:     # switch element
                 temp = alist[index]
                 alist[index] = alist[i-1]
-                alist[i-1] = temp
-                # print (i) / print (alist) will showing the process of insertion sort
-            i += 1
+                alist[i-1] = temp                                         
+            i += 1                        # print (i) / print (alist) will showing the process of insertion sort
         i = 1
     return alist
 
