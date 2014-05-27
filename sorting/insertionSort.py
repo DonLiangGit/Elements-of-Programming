@@ -1,4 +1,4 @@
-
+# @author: Don Liang
 
 def insertionSort(alist):
     pivot = alist[0]
@@ -13,6 +13,7 @@ def insertionSort(alist):
         i = 1
     return alist
 
+# test case
 alist = [54,26,93,17,77,31,44,55,20]
 insertionSort(alist)
 print(alist)
