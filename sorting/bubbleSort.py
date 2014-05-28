@@ -5,9 +5,10 @@
 # Error 2: IndexError: list index out of range
 # Because if i+1 <= max this condition i should be up to 7 not 8. cancel "="
 def bubbleSort(aList):
+	
 	j = 1
 	max = len(aList)
-	while j < max:
+	while j < max:                      # comparisons for each round
 		for i in range(len(aList)):
 			if i+1 < max:
 				if aList[i] < aList[i+1]:
