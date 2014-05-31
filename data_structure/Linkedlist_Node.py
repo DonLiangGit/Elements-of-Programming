@@ -1,3 +1,4 @@
+# define a Node class for linked list
 class Node:
 	def __init__ (self,initdata):
 		self.data = initdata
@@ -10,6 +11,7 @@ class Node:
 		self.data = addedData
 	def addNext(self, nextNode):
 		self.next = nextNode
+		
 
 temp = Node("hello")
 print(temp.getData())
