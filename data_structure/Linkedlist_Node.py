@@ -28,9 +28,15 @@ class UnorderedList:
         temp.addNext(self.head)
         self.head = temp
         print("successful add.")
-        
+    def size(self):
+    	current = self.head
+    	count = 0
+    	while current != None:
+    		count += 1
+    		current.getNext()
+    	return count
+	
 mylist = UnorderedList()
 mylist.isEmpty()
 mylist.add(12)
 mylist.add(13)
-print(mylist)
