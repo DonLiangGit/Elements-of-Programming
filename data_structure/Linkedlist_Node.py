@@ -20,19 +20,27 @@ class Node:
 class UnorderedList:
     def __init__(self):
         self.head = None
+        self.last = None
     def isEmpty(self):
         print("The List is empty.")
         return self.head == None
     def add(self,item):
-        temp = Node(item)
-        temp.addNext(self.head)
-        self.head = temp
-        print("successful add.")
+    	temp = Node(item)
+    	temp.addNext(self.head)
+    	if self.head == None:
+	        self.head = temp
+	        self.last = temp
+	        print("successful add.")
+		else:
+	    	temp = Node(item)
+	    	temp.addNext(self.last)
+	    	self.last = temp
     def size(self):
     	current = self.head
     	count = 0
     	while current != None:
     		count += 1
+    		print(count)
     		current.getNext()
     	return count
 	
