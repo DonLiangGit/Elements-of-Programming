@@ -15,9 +15,22 @@ class Node:
 		self.data = addedData
 	def addNext(self, nextNode):
 		self.next = nextNode
-		
 
-temp = Node("hello")
-print (temp.getData())
-temp.addData(98)
-print(temp.getData())
+# define an unordered list
+class UnorderedList:
+    def __init__(self):
+        self.head = None
+    def isEmpty(self):
+        print("The List is empty.")
+        return self.head == None
+    def add(self,item):
+        temp = Node(item)
+        temp.addNext(self.head)
+        self.head = temp
+        print("successful add.")
+        
+mylist = UnorderedList()
+mylist.isEmpty()
+mylist.add(12)
+mylist.add(13)
+print(mylist)
