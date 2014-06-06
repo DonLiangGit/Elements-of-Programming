@@ -28,21 +28,21 @@ class UnorderedList:
 	
 	def add(self,item):
 		temp = Node(item)
-		temp.addNext(self.head)
 		if self.head == None:
+			temp.addNext(self.head)
 			self.head = temp
 			self.last = temp
 			print("successful add.")
 		else:
-			temp = Node(item)
-			temp.addNext(self.last)
+			self.last.next = temp
 			self.last = temp
+			print("add nodes")
 	def size(self):
 		current = self.head
 		count = 0
+		print(count)
 		while current != None:
 			count += 1
-			print(count)
 			current.getNext()
 		return count
 	
@@ -50,3 +50,5 @@ mylist = UnorderedList()
 mylist.isEmpty()
 mylist.add(12)
 mylist.add(13)
+mylist.add(14)
+print(mylist.size())
